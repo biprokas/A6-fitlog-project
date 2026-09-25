@@ -7,9 +7,9 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <button className="rounded-full px-4 py-2 text-sm font-medium transition-colors hover:text-[#C2F800] active:text-[#C2F800]">
+        <Link href="/workouts" className="rounded-full px-4 py-2 text-sm font-medium transition-colors hover:text-[#C2F800] active:text-[#C2F800]"><button >
           Workouts
-        </button>
+        </button></Link>
       </li>
 
       <li>
