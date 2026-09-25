@@ -13,9 +13,9 @@ const Navbar = () => {
       </li>
 
       <li>
-        <button className="rounded-full px-4 py-2 text-sm font-medium transition-colors hover:text-[#C2F800] active:text-[#C2F800]">
+        <Link href="/my-plans" className="rounded-full px-4 py-2 text-sm font-medium transition-colors hover:text-[#C2F800] active:text-[#C2F800]"><button >
           My Plans
-        </button>
+        </button></Link>
       </li>
     </>
   );

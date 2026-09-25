@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Shared/Navbar";
+import ItemsProvider from "@/context/ItemsContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,11 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-full flex flex-col`}>
-        <Navbar />
+        <ItemsProvider>
+          <Navbar />
 
-        {children}
+          {children}
 
-        <h2>this is footer</h2>
+          <h2>this is footer</h2>
+        </ItemsProvider>
       </body>
     </html>
   );
