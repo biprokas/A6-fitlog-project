@@ -1,4 +1,5 @@
 import PlannedButton from "@/components/itemDetails/PlannedButton";
+import SavedButton from "@/components/itemDetails/SavedButton";
 import Image from "next/image";
 import React from "react";
 
@@ -101,18 +102,7 @@ const ItemDetailsPage = async ({ params }) => {
           <div className="card-actions justify-start flex-col sm:flex-row gap-3 pt-2">
                     <PlannedButton item={item} />
 
-            <button className="btn bg-[#1a1d24] hover:bg-[#222630] border-zinc-800 text-zinc-300 normal-case text-sm rounded-xl font-semibold">
-              <svg
-                className="w-4 h-4 stroke-zinc-400 fill-none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-              </svg>
-              Save for later
-            </button>
+            <SavedButton item={item}/>
           </div>
         </div>
       </div>
