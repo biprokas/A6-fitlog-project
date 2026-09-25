@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
 
         {children}
 
-        <h2>this is nav</h2>
+        <h2>this is footer</h2>
       </body>
     </html>
   );

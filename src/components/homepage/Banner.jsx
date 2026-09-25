@@ -5,7 +5,7 @@ import bannerImg from "@/assets/banner.png";
 const Banner = () => {
   return (
     <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-      <div className="container mx-auto overflow-hidden rounded-3xl bg-[#222630] px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12">
+      <div className="container mx-auto overflow-hidden rounded-3xl bg-[#15171D] px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-12">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Content */}
           <div className="max-w-xl">

@@ -21,9 +21,15 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="container mx-auto px-4">
-      <div className="navbar min-h-20 bg-transparent px-0">
-        {/* Logo + Mobile Menu */}
+    <nav className="border-b border-gray-700">
+      <div className="container mx-auto px-4">
+
+      <div className=" navbar min-h-20 bg-transparent px-0">
+       
+
+
+
+       
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -65,19 +71,24 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
+        
+
+
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal items-center gap-2 px-1">
             {links}
           </ul>
         </div>
 
-        {/* Right Side */}
+        
+
+
+
+
         <div className="navbar-end gap-3 sm:gap-5">
           <Link
             href="/my-plan"
-            className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#C2F800]"
-          >
+            className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#C2F800]">
             <span>Plan</span>
 
             <span className="flex min-w-7 items-center justify-center rounded-full bg-[#C2F800] px-2 py-1 text-xs font-bold text-black">
@@ -97,6 +108,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
+            </div>
     </nav>
   );
 };
