@@ -49,11 +49,11 @@ const PlannedButton = ({ item }) => {
         </span>
       </div>,
       {
-        icon: false, // Disables default toastify icon
+        icon: false, 
         style: {
           backgroundColor: "#121418",
           border: "1px solid #1f222a",
-          borderRadius: "0.75rem", // rounded-xl
+          borderRadius: "0.75rem", 
           padding: "12px 16px",
           boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.5)",
         },

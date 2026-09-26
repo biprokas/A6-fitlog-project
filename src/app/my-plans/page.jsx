@@ -25,10 +25,8 @@ const MyPlannedItems = () => {
 
   const [completedIds, setCompletedIds] = useState([]);
 
-  // Sort state
   const [sortBy, setSortBy] = useState("duration");
 
-  // Sort Today's Plan
   const sortedPlanned = useMemo(() => {
     const sorted = [...planned];
 
@@ -51,7 +49,6 @@ const MyPlannedItems = () => {
     return sorted;
   }, [planned, sortBy]);
 
-  // Remove from Today's Plan
   const handleRemovePlanned = (id) => {
     setPlanned(planned.filter((item) => item.id !== id));
 
@@ -61,7 +58,6 @@ const MyPlannedItems = () => {
     );
   };
 
-  // Remove from Saved
   const handleRemoveSaved = (id) => {
     setLater(later.filter((item) => item.id !== id));
 
@@ -71,7 +67,6 @@ const MyPlannedItems = () => {
     );
   };
 
-  // Add to Today's Plan
   const handleAddToPlan = (item) => {
     const alreadyPlanned = planned.some(
       (plannedItem) => plannedItem.id === item.id,
@@ -84,7 +79,6 @@ const MyPlannedItems = () => {
     toast(<CustomToast message="Added to today's plan" />, toastConfig);
   };
 
-  // Mark as Done
   const handleMarkDone = (id) => {
     if (completedIds.includes(id)) return;
 

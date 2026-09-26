@@ -1,7 +1,7 @@
 import React from "react";
 import WorkoutCard from "../../components/Shared/WorkoutCard";
 const getSets = async () => {
-  const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+  const res = await fetch("https://api.abcz.workers.dev/api/fitlog")
   const data = await res.json();
   return data;
 };
