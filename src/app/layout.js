@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Shared/Navbar";
 import ItemsProvider from "@/context/ItemsContext";
 import { ToastContainer } from "react-toastify";
+import Footer from "@/components/Shared/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
 
           {children}
 
-          <h2>this is footer</h2>
+          <Footer/>
           <ToastContainer />
         </ItemsProvider>
       </body>

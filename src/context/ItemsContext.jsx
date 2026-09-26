@@ -2,7 +2,7 @@
 
 import React, { Children, createContext, useState } from "react";
 
-export const ItemsContext = createContext( );
+export const ItemsContext = createContext({});
 
 const ItemsProvider = ({ children  }) => {
   const [planned, setPlanned] = useState([]);
