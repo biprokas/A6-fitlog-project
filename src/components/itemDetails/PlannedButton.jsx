@@ -2,16 +2,64 @@
 
 import ItemsProvider, { ItemsContext } from "@/context/ItemsContext";
 import React, { useContext } from "react";
+import { toast } from "react-toastify";
 
 const PlannedButton = ({ item }) => {
   const { planned, setPlanned } = useContext(ItemsContext);
 
-
-
   const handlePlanned = () => {
+    const alreadyPlanned = planned.some(
+      (plannedItem) => plannedItem.id === item.id,
+    );
 
+    if (alreadyPlanned) {
+      toast("Already added to today's plan", {
+        icon: false,
+        style: {
+          backgroundColor: "#121418",
+          border: "1px solid #1f222a",
+          borderRadius: "0.75rem",
+          padding: "12px 16px",
+          boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.5)",
+        },
+        hideProgressBar: true,
+      });
+
+      return;
+    }
     setPlanned([...planned, item]);
-    alert(`added to my planned "${item.name}" `);
+    toast(
+      <div className="flex items-center gap-2">
+        {/* Green Circle with White Checkmark */}
+        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#4cd964] shrink-0">
+          <svg
+            className="w-3 h-3 stroke-white fill-none"
+            viewBox="0 0 24 24"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+
+        {/* Text */}
+        <span className="text-sm font-medium text-zinc-100 tracking-wide">
+          Added to today's plan
+        </span>
+      </div>,
+      {
+        icon: false, // Disables default toastify icon
+        style: {
+          backgroundColor: "#121418",
+          border: "1px solid #1f222a",
+          borderRadius: "0.75rem", // rounded-xl
+          padding: "12px 16px",
+          boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.5)",
+        },
+        hideProgressBar: true,
+      },
+    );
   };
 
   return (

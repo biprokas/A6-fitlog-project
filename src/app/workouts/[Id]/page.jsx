@@ -100,9 +100,9 @@ const ItemDetailsPage = async ({ params }) => {
 
           {/* Action Buttons */}
           <div className="card-actions justify-start flex-col sm:flex-row gap-3 pt-2">
-                    <PlannedButton item={item} />
+            <PlannedButton item={item} />
 
-            <SavedButton item={item}/>
+            <SavedButton item={item} />
           </div>
         </div>
       </div>

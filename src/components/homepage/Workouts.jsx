@@ -23,7 +23,7 @@ const Workouts = async () => {
 
       {/* grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {setsData.slice(0, 9).map((item, id) => {
+        {setsData.map((item, id) => {
           return <WorkoutCard key={id} item={item} />;
         })}
       </div>
